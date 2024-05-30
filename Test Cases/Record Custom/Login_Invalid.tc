@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Login_Invalid</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d362585c-7a1f-4cb2-a6c6-4227576cbcb9</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>43be6959-b323-4eae-a673-c42d61e9bc72</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>82ea4bac-b9f2-49fc-b449-1f53ed59976e</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'Admin'</defaultValue>
+      <description></description>
+      <id>43be6959-b323-4eae-a673-c42d61e9bc72</id>
+      <masked>false</masked>
+      <name>username</name>
+   </variable>
+   <variable>
+      <defaultValue>'test123'</defaultValue>
+      <description></description>
+      <id>82ea4bac-b9f2-49fc-b449-1f53ed59976e</id>
+      <masked>false</masked>
+      <name>password</name>
+   </variable>
+</TestCaseEntity>

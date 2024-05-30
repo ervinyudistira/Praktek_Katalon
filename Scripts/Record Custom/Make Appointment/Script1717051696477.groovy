@@ -21,15 +21,40 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl(GlobalVariable.URL)
 
-WebUI.click(findTestObject('Object Repository/Record/i_CURA Healthcare_fa fa-bars'))
+WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('Object Repository/Record/a_Login'))
+WebUI.takeScreenshot()
 
-WebUI.setText(findTestObject('Object Repository/Record/input_Username_username'), 'John Doe')
+WebUI.click(findTestObject('Object Repository/Record/a_Make Appointment'))
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Record/input_Password_password'), 'g3/DOGG74jC3Flrr3yH+3D/yKbOqqUNM')
+WebUI.setText(findTestObject('Object Repository/Record/input_Username_username'), GlobalVariable.username)
+
+WebUI.setText(findTestObject('Object Repository/Record/input_Password_password'), GlobalVariable.password)
+
+WebUI.takeScreenshot()
 
 WebUI.click(findTestObject('Object Repository/Record/button_Login'))
+
+WebUI.selectOptionByValue(findTestObject('Object Repository/Record/select_Tokyo CURA Healthcare Center        _5b4107'), 
+    Cura, true)
+
+WebUI.click(findTestObject('Object Repository/Record/input_Apply for hospital readmission_hospit_63901f'))
+
+WebUI.click(findTestObject('Object Repository/Record/label_Medicare'))
+
+WebUI.click(findTestObject('Object Repository/Record/input_Visit Date (Required)_visit_date'))
+
+WebUI.click(findTestObject('Object Repository/Record/td_30'))
+
+WebUI.setText(findTestObject('Object Repository/Record/textarea_Comment_comment'), TextDescript)
+
+WebUI.takeScreenshot()
+
+WebUI.click(findTestObject('Object Repository/Record/button_Book Appointment'))
+
+WebUI.takeScreenshot()
+
+WebUI.delay(GlobalVariable.Waiting)
 
 WebUI.closeBrowser()
 

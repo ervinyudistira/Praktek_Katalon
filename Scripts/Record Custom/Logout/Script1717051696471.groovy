@@ -19,17 +19,29 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
+WebUI.maximizeWindow()
+
 WebUI.navigateToUrl(GlobalVariable.URL)
 
 WebUI.click(findTestObject('Object Repository/Record/i_CURA Healthcare_fa fa-bars'))
 
 WebUI.click(findTestObject('Object Repository/Record/a_Login'))
 
-WebUI.setText(findTestObject('Object Repository/Record/input_Username_username'), 'John Doe')
+WebUI.setText(findTestObject('Object Repository/Record/input_Username_username'), GlobalVariable.username)
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Record/input_Password_password'), 'g3/DOGG74jC3Flrr3yH+3D/yKbOqqUNM')
+WebUI.setText(findTestObject('Object Repository/Record/input_Password_password'), GlobalVariable.password)
+
+WebUI.takeScreenshot()
 
 WebUI.click(findTestObject('Object Repository/Record/button_Login'))
+
+WebUI.click(findTestObject('Object Repository/Record/i_CURA Healthcare_fa fa-bars'))
+
+WebUI.click(findTestObject('Object Repository/Record/a_Logout'))
+
+WebUI.takeScreenshot()
+
+WebUI.delay(GlobalVariable.Waiting)
 
 WebUI.closeBrowser()
 
